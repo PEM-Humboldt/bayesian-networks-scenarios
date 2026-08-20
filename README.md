@@ -14,15 +14,23 @@ En este repositorio se compilan las rutinas para la generación de Redes Bayesia
 # Prerequisitos
 El paquete [bnlearn](https://www.bnlearn.com/) permite ejecutar las funciones más importantes para la contrucción de redes bayesianas a partir de evidencia y conocimeinto de experto.
 ```R
-# Instalación
 
+# Librerias necesarias y sus versiones
+library(bnlearn)      # v5.1
+library(gRain)        # v1.4.6
+library(Rgraphviz)    # v2.56.0
+library(openxlsx)     # v4.2.8.1
+library(readxl)       # v1.5.0
+library(crayon)       # v1.5.3
+library(dplyr)        # v1.2.1
+library(tidyr)        # v1.3.2
 
-# Librerias necesarias
+# Instalación Rgraphviz
+#https://bioconductor.posit.co/packages/3.20/bioc/html/Rgraphviz.html 
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
 
-
-# Versiones utilizadas
-
-
+BiocManager::install("Rgraphviz")
 
 ```
 ---
