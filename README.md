@@ -1,11 +1,12 @@
-# bayesian-networks-scenarios (EN CONSTRUCCIÓN)
-Conjunto de rutinas para elaborar Redes Bayesianas para la toma de decisiones y la creación de escenarios
+(EN CONSTRUCCIÓN)
 
 # 🚦 Creación de escenarios de Redes de Creencia Bayesiana para la toma de decisiones
 
-Descripción y objetivo del Flujo de Trabajo .....
+Los Escenarios de Naturaleza a partir del marco de trabajo de TNFD (Taskforce on Nature-related Financial Disclosures) permiten simular transformaciones críticas en el estado de los impactos, dependecias y riesgos empresariales en relación al estado de la biodiversidad y la naturaleza. Bajo este enfoque sistémico, la integración de las presiones de un clima cambiante, el aumento de la presión de las actividades humanas y las transiciones del entorno natural en una mismo modelo, fomenta decisiones informadas que aseguran en conjunto la protección de los ecosistemas y la continuidad empresarial a largo plazo.
 
-En este repositorio se compilan las rutinas para la generación de Redes Bayesianas con base en el marco del proyecto Fibras II con participación del IAVH y Ecopetrol.
+En este repositorio se compilan las rutinas para la generación de Redes Bayesianas con base en el marco del proyecto Fibras II con participación del IAVH y Ecopetrol. En este flujos de trabajo se propuso conectar TNFD y "Posriteve Nature" que son dos marcos crucialaes para que los negocios y mercados estén alienados con la conservación de la Naturaleza.
+
+
 
 # Dependencias
 * [R](https://cran.r-project.org/mirrors.html)
@@ -80,9 +81,13 @@ Este proyecto está licenciado bajo la licencia MIT. Para obtener más informaci
 
 
 
-# Referencias
+# Referencias Técnicas
 
 Funciones de referencia: https://www.bnlearn.com/
 
 Sofwares de referencia y tutoriales:  https://www.norsys.com/index.html
+
+# Referencias teóricas
+
+
 
