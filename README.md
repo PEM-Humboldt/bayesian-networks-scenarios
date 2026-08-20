@@ -35,14 +35,12 @@ BiocManager::install("Rgraphviz")
 ```
 ---
 # Descripción flujo de análisis
-
+![Image](https://github.com/PEM-Humboldt/bayesian-networks-scenarios/blob/442a42726c15975667b7eeff6dad6ef8906f1a6e/Imagenes/Flujo_metodologico.png)
 
 
 
 ## Ejecución del algoritmo
-Específicamente la etapa cuatro del flujo de análisis comprende las funciones principales para el desarrollo del algoritmo de priorización, en esta fase se generan 60 portafolios que resultan de la combinación de metas de conservación (10-100%) y factores de penalidad (0-100) Por la complejidad de las combinaciónes entre estas variables de análisis, se utilizó una estructura paralelizada (paquetes `furr`, `future` y `future.apply`) que ayudan a reducir significativamente los tiempos de ejecución. Este repositorio contiene sola una version para la ejecución del algoritmo: 
 
-* Costos por conectividad: PrioritizR_Run_SingularidadM1_acuatica.R
 
 
 ## Archivos necesarios
