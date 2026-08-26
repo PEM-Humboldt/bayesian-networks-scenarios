@@ -71,23 +71,28 @@ main.excel.path <- "Pruebas/BN_FibrasIIv3.xlsx"
 baseline.path <- "linea_basePC/LineaBase_2020.xlsx"
 # Columnas requeridas: Nodos, Probabilidad
 ```
-Para ingresar las tablas de excel correctamente use como plantilla y ejemplo los archivos cargados en la carpeta [Insumos]()
+Para ingresar las tablas de excel correctamente use como plantilla y ejemplo los archivos cargados en la carpeta [Insumos](https://github.com/PEM-Humboldt/bayesian-networks-scenarios/tree/88efe5d36eb38d0170261478d2eef777bd4d37cf/Insumos)
 
 
-## Problema de optimización
+## Funciones principales 
 
-
-
-| Componente | Descripción | Comando |
+| Comando | Descripción | Script |
 | :--- | :--- | :--- |
-| | | |
-|  | |  |
+| `expand.grid`| Crea una tabla de datos a partir de todas las combinaciones de los factores (estados de los nodos) proporcionados| 1_CPT_Generation_FibrasII.R|
+| `get_prob_data` |Filtra el la hoja de excel 'probs' y devuelve una lista con: score (probabilidad numérica), estado.p (estado del predictor o nodo padre), estado.r (estado de la respuesta o nodo hijo), estado.int.p (estado intermedio del predictor, si aplica) y estado.int.r (estado intermedio de la respuesta, si aplica)|   1_CPT_Generation_FibrasII.R |
 |  |  |  |
 | |  |   |
 |  |  |  |
 
 
 ---
+
+## Visualización de resultados
+
+
+
+
+
 
 # Errores comunes
 
