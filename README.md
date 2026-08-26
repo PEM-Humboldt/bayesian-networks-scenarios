@@ -4,15 +4,14 @@
 
 Los Escenarios de Naturaleza a partir del marco de trabajo de TNFD (Taskforce on Nature-related Financial Disclosures) permiten simular transformaciones críticas en el estado de los impactos, dependecias y riesgos empresariales en relación al estado de la biodiversidad y la naturaleza. Bajo este enfoque sistémico, la integración de las presiones de un clima cambiante, el aumento de la presión de las actividades humanas y las transiciones del entorno natural en una mismo modelo, fomenta decisiones informadas que aseguran en conjunto la protección de los ecosistemas y la continuidad empresarial a largo plazo.
 
-En este repositorio se compilan las rutinas para la generación de Redes Bayesianas con base en el marco del proyecto Fibras II con participación del IAVH y Ecopetrol. En este flujos de trabajo se propuso conectar TNFD y "Posriteve Nature" que son dos marcos crucialaes para que los negocios y mercados estén alienados con la conservación de la Naturaleza.
-
-
+En este repositorio se compilan las rutinas para la generación de Redes Bayesianas con base en el marco del proyecto Fibras II con participación del IAVH y Ecopetrol. En este flujos de trabajo se propuso conectar TNFD y "Positive Nature" que son dos marcos crucialaes para que los negocios y mercados estén alienados con la conservación de la Naturaleza.
 
 # Dependencias
 * [R](https://cran.r-project.org/mirrors.html)
 
 # Prerequisitos
-El paquete [bnlearn](https://www.bnlearn.com/) permite ejecutar las funciones más importantes para la contrucción de redes bayesianas a partir de evidencia y conocimeinto de experto.
+El paquete [bnlearn](https://www.bnlearn.com/) permite ejecutar las funciones más importantes para la contrucción de redes bayesianas a partir de evidencia y conocimeinto de experto. Antes de ejecutar los scripts, se recomienda preparar la instalación de las liberías necesarias para su ejecución. A continuación, se presentan la lista de paquetes necesarios y las versiones utilizadas al momento de la ejecución del flujo de trabajo.
+
 ```R
 
 # Librerias necesarias y sus versiones
@@ -35,12 +34,16 @@ BiocManager::install("Rgraphviz")
 ```
 ---
 # Descripción flujo de análisis
+En síntesis, el flujo de trabajo del proyecto consta de 6 pasos divididos en dos fases. 
+
+En la **primera fase** (creación del modelo conceptual), los investigadores deben definir conceptualmente la estructura del modelo: qué componentes abarca y cómo son las interacciones entre ellos. Es fundamental que el modelo se desarrolle en co-creación con el conocimiento de múltiples expertos, para lograr una versión más integral de las dinámicas del modelo. Técnicamente, en esta fase no se contemplan flujos de trabajo basados en código, sino talleres participativos guiados por metodologías de co-diseño y co-creación.
+
+Los scripts documentados en este repositorio se centran principalmente en la **segunda fase** ("Implementación de Bayesian Belief Networks"), que se encarga de traducir el modelo conceptual a un archivo nativo de redes bayesianas con extensión `.net`. Este formato es compatible con la gran mayoría de los software comerciales y de libre acceso especializados en este tipo de redes.
+
 ![Image](https://github.com/PEM-Humboldt/bayesian-networks-scenarios/blob/442a42726c15975667b7eeff6dad6ef8906f1a6e/Imagenes/Flujo_metodologico.png)
 
-
-
 ## Ejecución del algoritmo
-
+En la carpta de **[Scripst](https://github.com/PEM-Humboldt/bayesian-networks-scenarios/tree/f5dac509bc4f5c2c6dae2eaacf237c8bdffeee08/Scripts)** de este repositorio 
 
 
 ## Archivos necesarios
