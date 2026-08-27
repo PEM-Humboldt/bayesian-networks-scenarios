@@ -1,5 +1,3 @@
-(EN CONSTRUCCIÓN)
-
 # 🚦 Redes de Creencia Bayesiana para la simulación de "Escenarios de la Naturaleza" que soporten la toma de decisiones
 
 Los Escenarios de Naturaleza a partir del marco de trabajo de TNFD (Taskforce on Nature-related Financial Disclosures) permiten simular transformaciones críticas en el estado de los impactos, dependecias y riesgos empresariales en relación al estado de la biodiversidad y la naturaleza. Bajo este enfoque sistémico, la integración de las presiones de un clima cambiante, el aumento de la presión de las actividades humanas y las transiciones del entorno natural en una mismo modelo, fomenta decisiones informadas que aseguran en conjunto la protección de los ecosistemas y la continuidad empresarial a largo plazo.
