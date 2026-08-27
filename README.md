@@ -105,10 +105,12 @@ A partir de la ejecución del script [2_BBN_Construction_FibrasII.R](https://git
 
 
 # Autores(as) y contacto
-* **[Elkin Alexi Noguera Urbano](https://github.com/elkalexno)** - *Investigador Titular. I. Humboldt* -  Contacto: enoguera@humboldt.org.co
-* Maria Alejandra Molina Berbeo  *Investigador Asistente. I. Humboldt* - Contacto: mmolina@humboldt.org.co 
-* Jessica Sanchez Londoño *Investigador Asistente. I. Humboldt* - Contacto: jessanchez@humboldt.org.co 
 * **[Edwin Uribe Velasquez](https://github.com/edwinuribeecobio)** - *Investigador Asistente. I. Humboldt* - Contacto: euribe@humboldt.org.co
+* **[Elkin Alexi Noguera Urbano](https://github.com/elkalexno)** - *Investigador Titular. I. Humboldt* -  Contacto: enoguera@humboldt.org.co
+* Maria Alejandra Molina Berbeo  *Investigadora Asistente. I. Humboldt* - Contacto: mmolina@humboldt.org.co 
+* Jessica Sanchez Londoño *Investigadora Asistente. I. Humboldt* - Contacto: jessanchez@humboldt.org.co 
+* Juliana Andrea Cortés *Investigadora Adjunta. I. Humboldt* - Contacto: jcortes@humboldt.org.co
+* Juan Nicolás Corral Gómez *Investigador Adjunto. I. Humboldt* - Contacto: jcorral@humboldt.org.co 
 
 ## Licencia
 
