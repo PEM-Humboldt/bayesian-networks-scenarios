@@ -125,8 +125,8 @@ Funciones de referencia: https://www.bnlearn.com/
 Sofwares de referencia y tutoriales:  https://www.norsys.com/index.html
 
 # Referencias teóricas
-[Bondé, L., Assis, J. C., Benavides-Gordillo, S., Canales-Gomez, E., Fajardo, J., Marrón-Becerra, A., Noguera-Urbano, E. A., Weidlich, E. W. A., & Ament, J. M. (2020). Scenario-modelling for the sustainable management of non-timber forest products in tropical ecosystems. Biota Neotropica, 20(suppl 1), e20190898. https://doi.org/10.1590/1676-0611-bn-2019-0898](https://doi.org/10.1590/1676-0611-BN-2019-0898)
-[Nagarajan, R., Scutari, M., & Lèbre, S. (2013). Bayesian networks in R: with applications in systems biology. Springer](https://link.springer.com/book/10.1007/978-1-4614-6446-4). 
-[Scutari, M. (2010). Learning Bayesian Networks with the bnlearn R Package. Journal of Statistical Software, 35(3), 1–22](https://doi.org/10.18637/jss.v035.i03).
+* **[Bondé, L., Assis, J. C., Benavides-Gordillo, S., Canales-Gomez, E., Fajardo, J., Marrón-Becerra, A., Noguera-Urbano, E. A., Weidlich, E. W. A., & Ament, J. M. (2020). Scenario-modelling for the sustainable management of non-timber forest products in tropical ecosystems. Biota Neotropica, 20(suppl 1), e20190898. https://doi.org/10.1590/1676-0611-bn-2019-0898](https://doi.org/10.1590/1676-0611-BN-2019-0898)
+* **[Nagarajan, R., Scutari, M., & Lèbre, S. (2013). Bayesian networks in R: with applications in systems biology. Springer](https://link.springer.com/book/10.1007/978-1-4614-6446-4). 
+* **[Scutari, M. (2010). Learning Bayesian Networks with the bnlearn R Package. Journal of Statistical Software, 35(3), 1–22](https://doi.org/10.18637/jss.v035.i03).
 
 
