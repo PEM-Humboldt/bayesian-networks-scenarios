@@ -46,11 +46,11 @@ Los scripts documentados en este repositorio se centran principalmente en la **s
 
 
 ## Ejecución del flujo de trabajo
-En la carpta de **[Scripts](https://github.com/PEM-Humboldt/bayesian-networks-scenarios/tree/f5dac509bc4f5c2c6dae2eaacf237c8bdffeee08/Scripts)** de este repositorio se encuentran dos rutinas numeradas
+En la carpta de **[Scripts](https://github.com/PEM-Humboldt/bayesian-networks-scenarios/tree/f5dac509bc4f5c2c6dae2eaacf237c8bdffeee08/Scripts)** de este repositorio se encuentran dos rutinas que deben ser ejecutadas en el orden especificado.
 
 * [1_CPT_Generation_FibrasII.R](https://github.com/PEM-Humboldt/bayesian-networks-scenarios/blob/583a68c41939d851cd99f7c4978d52d73b3eb63b/Scripts/1_CPT_Generation_FibrasII.R): lee un libro de Excel que contiene definiciones de nodos (Componentes del modelo), estructura de arcos (interaciones entre componentes) y datos de probabilidad condicional (provenientes de talleres con expertos). Para cada nodo que tiene padres (nodos condicionales), construye una Tabla de Probabilidad Condicional (CPT) completa. Las CPTs generadas se escriben nuevamente en el mismo archivo Excel, como nuevas hojas denominadas "CPT_<nodo>".
 
-* [2_BBN_Construction_FibrasII.R](https://github.com/PEM-Humboldt/bayesian-networks-scenarios/blob/583a68c41939d851cd99f7c4978d52d73b3eb63b/Scripts/2_BBN_Construction_FibrasII.R): construye la red apartir de un libro de excel, la ajusta con las distribuciones proporcionadas, visualiza el grafico de nodos, arcos y barras de probabilidad, exporta la red al formato Netica (.net) y proporciona una función para inferencia diagnóstica mediante simulacion de escenarios.
+* [2_BBN_Construction_FibrasII.R](https://github.com/PEM-Humboldt/bayesian-networks-scenarios/blob/583a68c41939d851cd99f7c4978d52d73b3eb63b/Scripts/2_BBN_Construction_FibrasII.R): construye la red apartir del libro de excel resultante del script anterior de excel, la ajusta con las distribuciones proporcionadas, visualiza el grafico de nodos, arcos y barras de probabilidad, exporta la red al formato Netica (.net) y proporciona una función para inferencia diagnóstica mediante simulacion de escenarios.
 
 ## Archivos necesarios
 Para esta rutina se necesita 2 archivos principales que son nombrados en el código de la siguiente manera:
@@ -80,15 +80,16 @@ Para ingresar las tablas de excel correctamente use como plantilla y ejemplo los
 | :--- | :--- | :--- |
 | `expand.grid`| Crea una tabla de datos a partir de todas las combinaciones de los factores (estados de los nodos) proporcionados| 1_CPT_Generation_FibrasII.R|
 | `get_prob_data` |Filtra el la hoja de excel 'probs' y devuelve una lista con: score (probabilidad numérica), estado.p (estado del predictor o nodo padre), estado.r (estado de la respuesta o nodo hijo), estado.int.p (estado intermedio del predictor, si aplica) y estado.int.r (estado intermedio de la respuesta, si aplica)|   1_CPT_Generation_FibrasII.R |
-|  |  |  |
-| |  |   |
-|  |  |  |
-
+| `bn.fibras` | Construye la estructura de una red bayesiana y sus distribuciones de probabilidad a partir de un libro de Excel con un formato específico | 2_BBN_Construction_FibrasII.R |
+| `custom.fit`| Toma un conjunto de distribuciones especificadas por el usuario y sus parámetros (resultado de la funcion  `bn.fibras`), y los utiliza para construir un objeto bn.fit. Su propósito es especificar una red bayesiana (completa con parámetros, no solo la estructura) utilizando conocimiento experto | 2_BBN_Construction_FibrasII.R |
+| ‎`diagnose_manual` | Realiza inferencia sobre un objeto focal dada las simulaciones en tres variables predictores (ejemplo dummy) |  2_BBN_Construction_FibrasII.R |
 
 ---
 
 ## Visualización de resultados
+A partir de la ejecución del script [2_BBN_Construction_FibrasII.R](https://github.com/PEM-Humboldt/bayesian-networks-scenarios/blob/583a68c41939d851cd99f7c4978d52d73b3eb63b/Scripts/2_BBN_Construction_FibrasII.R) se obtiene un archivo .net que puede ser visualizado directamente en R, pero más interactivamente en softwares como [Netica](https://www.norsys.com/index.html) o [GeNIe](https://www.bayesfusion.com/genie/). En la carpeta resultados se encuntra el archivo de la red, el cual se visauliza con las barras de probabilidades de la siguiente manera: 
 
+![Image](https://github.com/PEM-Humboldt/bayesian-networks-scenarios/blob/cf7d89e1cce66735e44ffd792d4da105fb788498/Imagenes/BBN_Netica.png)
 
 
 
@@ -100,7 +101,9 @@ Para ingresar las tablas de excel correctamente use como plantilla y ejemplo los
 
 📁 Archivos de entrada no encontrados o rutas incorrectas.
 
-💾 Agotamiento de memoria o fallos en procesamiento paralelo: El número de workers (núcleos) utilizados, es de los factores más comunes de error en la rutina. Se recomienda hacer pruebas experimentales para encontrar el número que más se ajuste a la memoría disponible en el computador. Se recomienda usar entre 6 y 8 workers si el computador lo permite.
+🁙 CTPs incompletas o con una mala distribución de probabilidades donde la suma de probabilidades de las combianciones entre estados no es igual a 1.
+
+🔖 Inconsistencias entre nombres de los nodos en las diferentes hojas del libro de excel.
 
 
 # Autores(as) y contacto
