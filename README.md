@@ -1,18 +1,18 @@
 # 🚦 Redes de Creencia Bayesiana para la simulación de "Escenarios de la Naturaleza" que soporten la toma de decisiones
 
-Los Escenarios de Naturaleza a partir del marco de trabajo de TNFD (Taskforce on Nature-related Financial Disclosures) permiten simular transformaciones críticas en el estado de los impactos, dependecias y riesgos empresariales en relación al estado de la biodiversidad y la naturaleza. Bajo este enfoque sistémico, la integración de las presiones de un clima cambiante, el aumento de la presión de las actividades humanas y las transiciones del entorno natural en una mismo modelo, fomenta decisiones informadas que aseguran en conjunto la protección de los ecosistemas y la continuidad empresarial a largo plazo.
+Los "Escenarios de Naturaleza" a partir del marco de trabajo de TNFD (Taskforce on Nature-related Financial Disclosures) permiten simular transformaciones críticas en el estado de los impactos, dependencias y riesgos empresariales en relación con el estado de la biodiversidad y la naturaleza. Bajo este enfoque sistémico, la integración de las presiones de un clima cambiante, el aumento de la presión de las actividades humanas y las transiciones del entorno natural en un mismo modelo, fomenta decisiones informadas que aseguran en conjunto la protección de los ecosistemas y la continuidad empresarial a largo plazo.
 
-En este repositorio se compilan las rutinas para la generación de Redes Bayesianas con base en el marco del proyecto Fibras II con participación del IAVH y Ecopetrol. En este flujos de trabajo se propuso conectar TNFD y "Positive Nature" que son dos marcos crucialaes para que los negocios y mercados estén alienados con la conservación de la Naturaleza.
+En este repositorio se compilan las rutinas para la generación de Redes Bayesianas de creencia con base en el marco del proyecto Fibras II con participación del IAVH y Ecopetrol. En estos flujos de trabajo se propuso conectar TNFD y "Positive Nature" que son dos marcos cruciales para que los negocios y mercados estén alineados con la conservación de la naturaleza.
 
 # Dependencias
 * [R](https://cran.r-project.org/mirrors.html)
 
 # Prerequisitos
-El paquete [bnlearn](https://www.bnlearn.com/) permite ejecutar las funciones más importantes para la contrucción de redes bayesianas a partir de evidencia y conocimeinto de experto. Antes de ejecutar los scripts, se recomienda preparar la instalación de las liberías necesarias para su ejecución. A continuación, se presentan la lista de paquetes necesarios y las versiones utilizadas al momento de la ejecución del flujo de trabajo.
+El paquete [bnlearn](https://www.bnlearn.com/) permite ejecutar las funciones más importantes para construir redes bayesianas a partir de evidencia y del conocimiento de experto. Antes de ejecutar los scripts, se recomienda preparar la instalación de las librerías necesarias. A continuación se presenta la lista de dependencias y sus respectivas versiones utilizadas al ejecutar el flujo de trabajo.
 
 ```R
 
-# Librerias necesarias y sus versiones
+# Librerías necesarias y sus versiones
 library(bnlearn)      # v5.1
 library(gRain)        # v1.4.6
 library(Rgraphviz)    # v2.56.0
@@ -126,5 +126,6 @@ Sofwares de referencia y tutoriales:  https://www.norsys.com/index.html
 
 # Referencias teóricas
 [Bondé, L., Assis, J. C., Benavides-Gordillo, S., Canales-Gomez, E., Fajardo, J., Marrón-Becerra, A., Noguera-Urbano, E. A., Weidlich, E. W. A., & Ament, J. M. (2020). Scenario-modelling for the sustainable management of non-timber forest products in tropical ecosystems. Biota Neotropica, 20(suppl 1), e20190898. https://doi.org/10.1590/1676-0611-bn-2019-0898](https://doi.org/10.1590/1676-0611-BN-2019-0898)
+[Nagarajan, R., Scutari, M., & Lèbre, S. (2013). Bayesian networks in R: with applications in systems biology. Springer](https://link.springer.com/book/10.1007/978-1-4614-6446-4). 
 
 
