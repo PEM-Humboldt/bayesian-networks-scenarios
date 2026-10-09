@@ -33,7 +33,7 @@ BiocManager::install("Rgraphviz")
 ---
 # Descripción flujo de análisis
 En síntesis, el flujo de trabajo del proyecto consta de 6 pasos divididos en dos fases.
-![Image](https://github.com/PEM-Humboldt/bayesian-networks-scenarios/blob/442a42726c15975667b7eeff6dad6ef8906f1a6e/Imagenes/Flujo_metodologico.png)
+![Image](https://github.com/PEM-Humboldt/bayesian-networks-scenarios/blob/479a7c28216863963a62358304f1be711697fe98/Imagenes/Flujo_metodologico_v5.png)
 
 En la **primera fase** (creación del modelo conceptual), los investigadores deben definir conceptualmente la estructura del modelo: qué componentes abarca y cómo son las interacciones entre ellos. Es fundamental que el modelo se desarrolle en co-creación con el conocimiento de múltiples expertos, para lograr una versión más integral de las dinámicas del modelo. Técnicamente, en esta fase no se contemplan flujos de trabajo basados en código, sino talleres participativos guiados por metodologías de co-diseño y co-creación. Como resultado del trabajo del proyecto Fibras II, la versión final del modelo cenpcetual se muestra en la siguiente imagen:
 
