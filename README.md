@@ -38,7 +38,7 @@ En síntesis, el flujo de trabajo del proyecto consta de 6 pasos divididos en do
 En la **primera fase** (creación del modelo conceptual), los investigadores deben definir conceptualmente la estructura del modelo: qué componentes abarca y cómo son las interacciones entre ellos. Es fundamental que el modelo se desarrolle en co-creación con el conocimiento de múltiples expertos, para lograr una versión más integral de las dinámicas del modelo. Técnicamente, en esta fase no se contemplan flujos de trabajo basados en código, sino talleres participativos guiados por metodologías de co-diseño y co-creación. Como resultado del trabajo del proyecto Fibras II, la versión final del modelo cenpcetual se muestra en la siguiente imagen:
 
 ### Modelo conceptual para Fibras II
-![Image](https://github.com/PEM-Humboldt/bayesian-networks-scenarios/blob/8b0716ab3e5482a955fa4ae5551509b632851c09/Imagenes/Copia01_07FibrasII_Borrador_sinflechasPaleta2%20(5).png)
+![Image](https://github.com/PEM-Humboldt/bayesian-networks-scenarios/blob/9f7336f9aeb3927ebd5ad3060848c9d9e9b0a581/Imagenes/Copia08_10FibrasII_Borrador_sinflechasPaleta2(V5).png)
 
 Los scripts documentados en este repositorio se centran principalmente en la **segunda fase** ("Implementación de Bayesian Belief Networks"), que se encarga de traducir el modelo conceptual a un archivo nativo de redes bayesianas con extensión `.net`. Este formato es compatible con la gran mayoría de los software comerciales y de libre acceso especializados en este tipo de redes.
 
@@ -49,6 +49,8 @@ En la carpta de **[Scripts](https://github.com/PEM-Humboldt/bayesian-networks-sc
 * [1_CPT_Generation_FibrasII.R](https://github.com/PEM-Humboldt/bayesian-networks-scenarios/blob/583a68c41939d851cd99f7c4978d52d73b3eb63b/Scripts/1_CPT_Generation_FibrasII.R): lee un libro de Excel que contiene definiciones de nodos (Componentes del modelo), estructura de arcos (interaciones entre componentes) y datos de probabilidad condicional (provenientes de talleres con expertos). Para cada nodo que tiene padres (nodos condicionales), construye una Tabla de Probabilidad Condicional (CPT) completa. Las CPTs generadas se escriben nuevamente en el mismo archivo Excel, como nuevas hojas denominadas "CPT_<nodo>".
 
 * [2_BBN_Construction_FibrasII.R](https://github.com/PEM-Humboldt/bayesian-networks-scenarios/blob/583a68c41939d851cd99f7c4978d52d73b3eb63b/Scripts/2_BBN_Construction_FibrasII.R): construye la red apartir del libro de excel resultante del script anterior de excel, la ajusta con las distribuciones proporcionadas, visualiza el grafico de nodos, arcos y barras de probabilidad, exporta la red al formato Netica (.net) y proporciona una función para inferencia diagnóstica mediante simulacion de escenarios.
+
+![Image](https://github.com/PEM-Humboldt/bayesian-networks-scenarios/blob/9f7336f9aeb3927ebd5ad3060848c9d9e9b0a581/Imagenes/Flujo2_BBN_Construction_FibrasII.png)
 
 ## Archivos necesarios
 Para esta rutina se necesita 2 archivos principales que son nombrados en el código de la siguiente manera:
