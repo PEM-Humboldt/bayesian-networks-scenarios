@@ -91,7 +91,7 @@ Para ingresar las tablas de excel correctamente use como plantilla y ejemplo los
 ## Visualización de resultados
 A partir de la ejecución del script [2_BBN_Construction_FibrasII.R](https://github.com/PEM-Humboldt/bayesian-networks-scenarios/blob/583a68c41939d851cd99f7c4978d52d73b3eb63b/Scripts/2_BBN_Construction_FibrasII.R) se obtiene un archivo .net que puede ser visualizado directamente en R, pero más interactivamente en softwares como [Netica](https://www.norsys.com/index.html) o [GeNIe](https://www.bayesfusion.com/genie/). En la carpeta [Resultados](https://github.com/PEM-Humboldt/bayesian-networks-scenarios/tree/88448237274b5b786848581bb99a95df41433f77/Resultados) se encuntra el archivo de la red, el cual se visualiza con las barras de probabilidades de la siguiente manera: 
 
-![Image](https://github.com/PEM-Humboldt/bayesian-networks-scenarios/blob/cf7d89e1cce66735e44ffd792d4da105fb788498/Imagenes/BBN_Netica.png)
+![Image](https://github.com/PEM-Humboldt/bayesian-networks-scenarios/blob/746e414a6ed888ec173f1679369baf0893d75a44/Imagenes/BN_FibrasIIv5_imagenNetica.png)
 
 
 
