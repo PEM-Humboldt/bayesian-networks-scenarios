@@ -37,7 +37,7 @@ setwd('C:/Humboldt_2026/FIBRAS2')
 #                 (contains scores for each combination of child, predictor,
 #                  method, and state values)
 cat(blue('Configurar la ruta de insumos en la linea de abajo\n'))
-main.excel.path <- "Pruebas/BN_FibrasIIv3.xlsx"
+main.excel.path <- "Pruebas/BN_FibrasIIv5.xlsx"
 nodes <- read.xlsx(main.excel.path, sheet = 'Nodos')
 arcs  <- read.xlsx(main.excel.path, sheet = 'Arcs')
 probs <- read.xlsx(main.excel.path, sheet = 'Probs')
@@ -61,7 +61,7 @@ get_prob_data <- function(probs, child.node, predictor, metodo) {
                     probs$Metodo == metodo, ]
   
   list(
-    score = ceiling(as.numeric(subset$Probabilidad)),   # Ensure integer score
+    score = round(as.numeric(subset$Probabilidad), 1),   # Ensure round score
     estado.p = subset$Estado.objetivo.predictor,
     estado.r = subset$Estado.objetivo.Respuesta,
     estado.int.p = subset$Estado.Intermedio.p,
@@ -93,16 +93,12 @@ for (r in 1:nrow(nodes)) {
   print(paste("Processing node index:", r))
   
   # 4.2 Skip marginal nodes (no parents) – they do not need CPT
-  if (nodes$Rol[r] == 'Impactos externos' | nodes$Rol[r] == 'Oportunidades') {
+  
+  if (!(nodes$Nodos[r] %in% arcs$to)){
     print('Marginal node – no CPT required')
     next   # Skip to next node
-  }
-  
-  # 4.3 For conditional nodes (have at least one parent), generate CPT
-  if (nodes$Rol[r] == 'Impactos ecopetrol' | 
-      nodes$Rol[r] == 'Dependencias'  |
-      nodes$Rol[r] == 'Indicador' |
-      nodes$Rol[r] == 'Riesgos') {
+  } # 4.3 For conditional nodes (have at least one parent), generate CPT
+   else {
     
     # Identify the parents of the current child node from the arcs data
     parent.nodes <- arcs[arcs$to == nodes$Nodos[r], ]$From
@@ -211,7 +207,7 @@ for (r in 1:nrow(nodes)) {
     
     # 4.10 Optionally remove the intermediate score columns (they are no longer needed)
     #      and convert frequencies to probabilities (divide by 100).
-    if (TRUE) {   # This flag allows removal of unnecessary columns 
+    if (T) {   # This flag allows removal of unnecessary columns 
       #(Set false if you want to check specific scores)
       # Drop all columns whose names start with "Score_"
       cpt.table <- cpt.table[, !grepl("Score_", names(cpt.table))]
