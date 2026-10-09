@@ -171,7 +171,7 @@ bn.fibras <- function(excel.path, baseline.path) {
 # Excel principal con la estrutura de la red (Mirar codigo 1_CPT_Generation_FibrasII)
 cat(blue('Cambiar la ruta del excel principal en la linea de abajo'))
 # Path to the data file (adjust as needed)
-excel.path <- "Pruebas/BN_FibrasIIv3.xlsx"
+excel.path <- "Pruebas/BN_FibrasIIv5.xlsx"
 
 # Excel con la linea base a 2020 para los nodos marginales
 cat(blue('Cambiar la ruta de la linea base en la linea de abajo'))
@@ -206,7 +206,7 @@ bn_fitted <- custom.fit(dag, dist = web$Dist)
 
 # Save bar chart of probabilities (TIFF format)
 cat(blue('Cambiar la ruta para exportar la imagen de la red en la linea de abajo'))
-export.path.image1 <- "Sgraficas/BN_FibrasIIv22_08_2026.tiff"
+export.path.image1 <- "Sgraficas/BN_FibrasIIv5_imagenR.tiff"
 tiff(export.path.image1,
      height = 120, width = 170, units = 'mm',
      compression = "lzw", res = 600)
@@ -216,9 +216,13 @@ dev.off()
 
 
 # Export the network to .net format (compatible with Netica)
+# .net format is also compatible with GeNIe but has some limitations
 cat(blue('Cambiar la ruta para exportar la red en la linea de abajo'))
-export.path <- 'C:/Humboldt_2026/FIBRAS2/Pruebas/pruebaR3_0.net'
+export.path <- 'C:/Humboldt_2026/FIBRAS2/Pruebas/BN_FibrasIIv5.net'
 write.net(export.path, bn_fitted)
+# Export the network to .dsc format (to get better performance in GeNIe)
+cat(blue('Cambiar la ruta para exportar la red en la linea de abajo'))
+write.dsc('C:/Humboldt_2026/FIBRAS2/Pruebas/BN_FibrasIIv5.dsc', bn_fitted)
 
 # Convert to 'grain' object for gRain inference
 bn_grain <- as.grain(bn_fitted)
@@ -229,47 +233,5 @@ graphviz.plot(dag,
               shape = "ellipse",
               layout = "dot",
               main = "Bayesian Network Structure")
-
-# ..............................................................................
-# Manual diagnostic ------------------------------------------------------------
-# Inference by simulation
-
-
-#' Performs inference on physical risk given evidence on three variables (Dummy example).
-#'
-#' @param Inundaciones_v   Flood level (must match node levels or categories).
-#' @param Quemas_incendios_v Burn/fire level.
-#' @param Calidad_habitat_v  Habitat quality level.
-#' @return Estimated probability that "Riesgos_fisicos" is "Aumento".
-diagnose_manual <- function(Inundaciones_v, Quemas_incendios_v, Calidad_habitat_v) {
-  
-  # Estimate via likelihood weighting sampling
-  prob <- cpquery(bn_fitted,
-                  event = (Riesgos_fisicos == "Aumento"),
-                  evidence = list(Inundaciones = Inundaciones_v,
-                                  Quemas_incendios = Quemas_incendios_v,
-                                  Calidad_habitat = Calidad_habitat_v),
-                  method = "lw")
-  
-  # Show results in console
-  cat("Scenario profile:\n")
-  cat("- Floods:", Inundaciones_v, "\n")
-  cat("- Burns/fires:", Quemas_incendios_v, "\n")
-  cat("- Habitat quality:", Calidad_habitat_v, "\n")
-  cat("\nProbability of increased Physical Risks:", round(prob * 100, 1), "%\n")
-  
-  # Qualitative interpretation
-  if (prob > 0.6) {
-    cat(red("High probability of increase.\n"))
-  } else {
-    cat(red("Low probability of increase.\n"))
-  }
-  
-  return(prob)
-}
-
-# Example usage
-cat(blue('Ejemplo de dianostico\n'))
-diagnose_manual("Atipico", "Incremento", "Aumento")
 
 cat(green('Processing finished.\n'))
